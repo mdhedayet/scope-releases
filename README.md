@@ -18,11 +18,11 @@ Get the installer for your system from the **[latest release](https://github.com
 
 | System | File to download |
 | --- | --- |
-| **macOS** (Apple Silicon: M1/M2/M3/M4) | `Scope-<version>-arm64.dmg` |
-| **macOS** (Intel) | `Scope-<version>-x64.dmg` |
-| **Windows** (x64 / ARM64) | `Scope-<version>-<arch>.exe` |
-| **Linux**, Debian / Ubuntu | `.deb` |
-| **Linux**, any distribution | `.AppImage` |
+| **macOS**, Apple Silicon (M1/M2/M3/M4) | `Scope-<version>-arm64.dmg` |
+| **macOS**, Intel | `Scope-<version>-x64.dmg` |
+| **Windows** (works on x64 and ARM64) | `Scope-<version>.exe` |
+| **Linux**, Debian / Ubuntu | `Scope-<version>-amd64.deb` (Intel/AMD) or `Scope-<version>-arm64.deb` (ARM) |
+| **Linux**, any distribution | `Scope-<version>-x86_64.AppImage` (Intel/AMD) or `Scope-<version>-arm64.AppImage` (ARM) |
 
 Not sure which Mac you have? Open  → About This Mac. "Chip: Apple M…" means Apple Silicon, "Processor: Intel" means Intel.
 
@@ -53,14 +53,14 @@ Not sure which Mac you have? Open  → About This Mac. "Chip: Apple M…" means 
 **Debian / Ubuntu (`.deb`)**
 
 ```sh
-sudo apt install ./Scope-<version>-<arch>.deb
+sudo apt install ./Scope-<version>-amd64.deb
 ```
 
 **AppImage (any distribution)**
 
 ```sh
-chmod +x Scope-<version>-<arch>.AppImage
-./Scope-<version>-<arch>.AppImage
+chmod +x Scope-<version>-x86_64.AppImage
+./Scope-<version>-x86_64.AppImage
 ```
 
 If the AppImage does not start on a recent Ubuntu, run it with `--no-sandbox`, or install the `.deb` instead.
